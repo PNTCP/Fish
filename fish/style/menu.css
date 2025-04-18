@@ -1,0 +1,25 @@
+/* Remove the following block if no logo will be used */
+.brand-logo {
+    height: 50px; /* Adjust the logo size */
+    margin-right: 10px; /* Add spacing between the logo and text */
+}
+
+.brand-name {
+    font-family: 'Poppins', sans-serif; /* Use a modern font */
+    font-size: 7rem; /* Increase font size significantly */
+    font-weight: bold; /* Make it bold */
+    color: #ff5722; /* Use a vibrant color */
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Add a stronger shadow */
+    transition: transform 0.3s ease, color 0.3s ease; /* Add hover effects */
+    margin-left: 20px !important; /* Force the margin to apply */
+}
+
+.brand-name:hover {
+    transform: scale(2.5); /* Enlarge more on hover */
+    color: #e64a19; /* Change color on hover */
+}
+
+header {
+    padding-left: 20px; /* Add space to the entire header */
+}
+

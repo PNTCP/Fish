@@ -1,0 +1,230 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sliding window styles */
+.cart-container {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initially hidden */
+    width: 400px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    transition: right 0.3s ease-in-out; /* Smooth sliding effect */
+    z-index: 1000;
+}
+
+.cart-container.open {
+    right: 0; /* Slide into view */
+}
+
+/* Overlay for background dimming */
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+}
+
+.cart-overlay.active {
+    display: block;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.cart-header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 5px;
+}
+
+.cart-item-details {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.cart-item-details h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.cart-item-details p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.cart-item-quanity, .cart-item-price {
+    text-align: center;
+    width: 100px;
+}
+
+.checkout-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.checkout-button:hover {
+    background-color: #0056b3;
+}
+
+/* "Continue Shopping" button */
+.continue-shopping-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.continue-shopping-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Order Card */
+.order-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.order-card:hover {
+    transform: scale(1.02);
+}
+
+/* Product List */
+.product-list {
+    margin-top: 15px;
+}
+
+.product-list img {
+    max-width: 80px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.product-list .product-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.product-list .product-item p {
+    margin: 0;
+}
+
+/* Order Actions */
+.order-actions {
+    margin-top: 15px;
+}
+
+.order-actions button {
+    margin-right: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.order-actions .btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.order-actions .btn-danger:hover {
+    background-color: #c82333;
+}
+
+.order-actions .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.order-actions .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.order-actions .btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.order-actions .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .order-card {
+        padding: 15px;
+    }
+
+    .product-list img {
+        max-width: 60px;
+    }
+
+    .order-actions button {
+        padding: 8px 12px;
+    }
+}
